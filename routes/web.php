@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',
+    [
+        "as"=>"home_path",
+        "uses"=>"PageController@index"
+    ]);
+Route::get('/about',[
+    "as"=>"about_path",
+    "uses"=>"PageController@about"
+]);
+

@@ -1,4 +1,4 @@
-@extends("layouts.master")
+@extends("layouts.master",['title'=>'about'])
 @section('content')
   <div class="container">
         <h2>What is Laracarte ?</h2>

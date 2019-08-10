@@ -36,6 +36,6 @@ class EmailMessage extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.messages.created');# c'est la vue utiliser pour etre envoyer comme mail
+        return $this->markdown('emails.messages.created');# c'est la vue utiliser pour etre envoyer comme mail 
     }
 }

@@ -16,8 +16,8 @@ class ContactController extends Controller
         ]);*/
        
         $m=new EmailMessage($r->name,$r->email,$r->msg);#je passe le name,email,et msg et utilisan la variable $r du for-requeste ContactRequest
-        Mail::to('admin@laracarte.com')->send($m);
-        return "Done!";
+        Mail::to(config('laracarte.laracarte_support'))->send($m);
+        return redirect()->route('home_path'); #rediriger vers la page home
     }
-   
+    
 }

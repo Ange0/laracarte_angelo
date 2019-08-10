@@ -6,13 +6,11 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-
+use  App\Models\Message;
 class EmailMessage extends Mailable
 {
     use Queueable, SerializesModels;
     #je l'es mets en public pour les avoir disponible dans mes vues
-    public $name;
-    public $email;
     public $msg;
     
     /**
@@ -20,11 +18,9 @@ class EmailMessage extends Mailable
      *
      * @return void
      */
-    public function __construct($name,$email,$msg)
+    public function __construct(Message $msg)
 
     {
-        $this->name=$name;
-        $this->email=$email;
         $this->msg=$msg;
 
     }

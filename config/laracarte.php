@@ -1,4 +1,4 @@
 <?php
 return [
-    "laracarte_support"=>"Kouassiangey@gmail.com"
+    "laracarte_support"=> env('ADMIN_LARACART')
 ];

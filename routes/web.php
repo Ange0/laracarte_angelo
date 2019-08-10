@@ -1,5 +1,5 @@
 <?php
-
+use App\Mail\EmailMessage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +29,5 @@ Route::post('/contact',[
     "as"=>"contact_path",
     "uses"=>"ContactController@store"
 ]);
+
+

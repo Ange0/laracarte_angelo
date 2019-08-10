@@ -20,15 +20,15 @@
                         <label for="email" class="control-label">
                         Email
                         </label>
-                        <input type="email" name="email" id="name" class="form-control" require=""/>
+                        <input type="email" name="email" id="email" class="form-control" require=""/>
                         {!! $errors->first('email','<span class="help-block">:message</span>') !!}
                     </div>
                     <div class="form-group {{ $errors->has('name')?'has-error':'' }}">
-                        <label for="name" class="control-label sr-only">
+                        <label for="msg" class="control-label sr-only">
                         Message
                         </label>
-                        <textarea require="" class="form-control" name="message" id="" cols="10" rows="10"></textarea>
-                        {!! $errors->first('message','<span class="help-block">:message</span>') !!}
+                        <textarea require="" class="form-control" name="msg" id="" cols="10" rows="10"></textarea>
+                        {!! $errors->first('msg','<span class="help-block">:message</span>') !!}
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary btn-block">Submit Enquiry &raquo;</button>

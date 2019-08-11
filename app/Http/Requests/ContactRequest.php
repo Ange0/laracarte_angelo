@@ -13,7 +13,7 @@ class ContactRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true; #tres important a mettre le return a vrais
     }
 
     /**

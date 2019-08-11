@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use  App\Models\Message;
-class EmailMessage extends Mailable
+class EmailMessage extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
     #je l'es mets en public pour les avoir disponible dans mes vues
@@ -32,6 +32,8 @@ class EmailMessage extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.messages.created');# c'est la vue utiliser pour etre envoyer comme mail 
+        return $this->from($this->msg->email,$this->msg->name)#cette methode prends deux parametres l'email et le nom de l'expediteur (client)
+        ->markdown('emails.messages.created');# c'est la vue utiliser pour etre envoyer comme mail 
+
     }
 }

@@ -12,6 +12,7 @@ class ContactController extends Controller
         return view('pages.contact');
     }
     public function store(ContactRequest $r){
+        
         $msg=new Message;
         $msg->nom=$r->name;
         $msg->email=$r->email;
@@ -22,7 +23,7 @@ class ContactController extends Controller
         ]);*/
        
         $m=new EmailMessage($msg);#je passe le name,email,et msg et utilisan la variable $r du for-requeste ContactRequest
-        Mail::to(config('laracarte.laracarte_support'))->send($m);
+        Mail::to(config('laracarte.laracarte_support'))->send($m); #en lieu et place d'utiliser send on va utiliser queue pour nos fil d'attente
         return redirect()->route('home_path'); #rediriger vers la page home
     }
     

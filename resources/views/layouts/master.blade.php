@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico">
 
     <!--<title>{{ isset($title) ? $title.' |':"" }} Laracarte - list of artisans</title> -->
-    <title>{{ page_title($title  ?? '') }}</title>
+    <title>{{ page_title($title  ?? '') }} {{-- très important pour savoir si la variable $title existe sinon chaine vide --}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet"> 

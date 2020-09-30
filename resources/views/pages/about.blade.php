@@ -1,4 +1,4 @@
-@extends("layouts.master",['title'=>'about'])
+@extends("layouts.master",['title'=>'About'])
 @section('content')
   <div class="container">
         <h2>What is {{ config('app.name') }} ?</h2>
